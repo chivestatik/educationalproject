@@ -5,6 +5,7 @@
 
 body {
   background-color: $background;
+  font-family: 'Commissioner', sans-serif;
 }
 
 .wrapper {
@@ -14,6 +15,16 @@ body {
   margin: 50px auto;
   border-radius: 10px;
   max-width: 1400px;
+
+  @media (max-width: 650px) {
+    .header {
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  }
 }
 
 .content {
@@ -26,13 +37,80 @@ body {
   &__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    grid-column-gap: 20px;
+
+    @media (max-width: 1400px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 1070px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 750px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media (max-width: 420px) {
+      .pizza-block__wrapper {
+        .pizza-block {
+          width: 200px;
+          text-align: center;
+          margin-bottom: 40px;
+
+          &__image {
+            width: 150px;
+            margin-bottom: 5px;
+          }
+
+          &__bottom {
+            margin-top: 5px;
+            display: flex;
+            flex-direction: column;
+          }
+
+          &__price {
+            font-size: 16px;
+          }
+        }
+      }
+    }
   }
 
   &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 1280px) {
+      gap: 30px;
+      flex-direction: column;
+    }
+
+    @media (max-width: 980px) {
+      .categories {
+        ul {
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+      }
+    }
+
+    @media (max-width: 450px) {
+      .categories {
+        ul {
+          li {
+            padding: 8px 12px;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 420px) {
+      .sort {
+        font-size: 12px;
+      }
+    }
   }
 }
 
@@ -50,6 +128,10 @@ body {
 }
 
 .cart {
+  .content__items {
+    display: block;
+  }
+	
   &__top {
     display: flex;
     justify-content: space-between;
