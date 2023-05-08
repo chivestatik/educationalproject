@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Header, Categories, Sort, PizzaBlock, Skeleton } from './components';
-// import pizzas from './assets/pizzas.json';
 
 function App() {
   const [items, setItems] = useState([]);
