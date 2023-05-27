@@ -16,7 +16,7 @@ body {
   border-radius: 10px;
   max-width: 1400px;
 
-  @media (max-width: 650px) {
+	@media (max-width: 1070px) {
     .header {
       .container {
         display: flex;

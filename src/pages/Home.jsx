@@ -20,7 +20,6 @@ function Home() {
         setIsLoading(false);
         setItems(json);
       });
-			console.log(sortOrder)
   }, [categoryId, sortType, sortOrder]);
 
   return (

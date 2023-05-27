@@ -1,0 +1,45 @@
+.root {
+	position: relative;
+  input {
+    font-size: 16px;
+    outline: none;
+    padding: 12px 20px;
+    width: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+		padding-left: 45px;
+		transition: 0.15s ease-in-out;
+
+		&:focus {
+			border: 1px solid rgba(0, 0, 0, 0.3);
+			width: 400px;
+		}
+  }
+  .search {
+    width: 24px;
+    height: 22px;
+    opacity: 0.4;
+    position: absolute;
+		left: 12px;
+		top: 10px;
+  }
+
+	.cross {
+		width: 28px;
+		height: 28px;
+		opacity: 0.3;
+		position: absolute;
+		left: 90%;
+		top: 20%; 
+		cursor: pointer;
+	}
+
+	@media (max-width: 520px) {
+   input {
+		width: 270px;
+		&:focus {
+			width: 300px;
+		}
+	 }
+  }
+}
