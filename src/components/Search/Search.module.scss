@@ -4,15 +4,13 @@
     font-size: 16px;
     outline: none;
     padding: 12px 20px;
-    width: 300px;
+    width: 500px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 		padding-left: 45px;
-		transition: 0.15s ease-in-out;
 
 		&:focus {
 			border: 1px solid rgba(0, 0, 0, 0.3);
-			width: 400px;
 		}
   }
   .search {
@@ -29,7 +27,7 @@
 		height: 28px;
 		opacity: 0.3;
 		position: absolute;
-		left: 90%;
+		left: 92%;
 		top: 20%; 
 		cursor: pointer;
 	}
