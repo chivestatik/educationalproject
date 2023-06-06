@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Categories, Sort, PizzaBlock, Skeleton, Pagination } from '../components';
+import { SearchContext } from '../App';
 
-function Home({ searchValue }) {
+function Home() {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [categoryId, setCategoryId] = useState(0);
   const [sortType, setSortType] = useState({ name: 'популярности', sortProperty: 'rating' });
   const [sortOrder, setSortOrder] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+
+	const {searchValue} = useContext(SearchContext)
 
   useEffect(() => {
     const search = searchValue ? `&search=${searchValue}` : '';
